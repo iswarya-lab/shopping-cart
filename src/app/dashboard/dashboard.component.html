@@ -19,5 +19,5 @@ Price : <span>{{ eachItem.Price }}</span><br/>
 Features : <br/>
 Bluetooth : <span *ngIf="eachItem.features.bluetooth">Yes</span> <span *ngIf="!eachItem.features.bluetooth">No</span><br/>
 Wifi : <span *ngIf="eachItem.features.wifi">Yes</span> <span *ngIf="!eachItem.features.wifi">No</span><br/><br/>
-<button>Add To Cart</button>
+<button (click) = "AddToCart(eachItem)">Add To Cart</button>
 </div>
