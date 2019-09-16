@@ -1,0 +1,19 @@
+{
+  "selectedItems": [
+    {
+      "id": 1,
+      "mobile": "Ericson",
+      "num": [
+        "../assets/images/Car1.jpg",
+        "../assets/images/Car2.jpg",
+        "../assets/images/Car3.jpg"
+      ],
+      "image": "../assets/images/Car1.jpg",
+      "Price": 35000,
+      "features": {
+        "bluetooth": true,
+        "wifi": false
+      }
+    }
+  ]
+}

@@ -8,12 +8,14 @@ import { ProductServiceService } from '../product-service.service';
 })
 export class DashboardComponent implements OnInit {
 
-  data = [];
+  data:any;
 
   constructor(private myService: ProductServiceService) { }
 
   ngOnInit() {
-    this.data = this.myService.getProducts();
+    this.myService.getProducts().subscribe((result) => {
+      this.data = result;
+    })
   }
 
 
@@ -24,6 +26,8 @@ export class DashboardComponent implements OnInit {
   @Output() cartQty = new EventEmitter();
 
   AddToCart(item){
-    this.myService.addProductsToCart(item);
+    this.myService.addProductsToCart(item).subscribe((result) => {
+      console.log("Updated successfully!!!");
+    })
   }
 }

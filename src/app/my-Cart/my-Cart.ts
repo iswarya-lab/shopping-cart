@@ -9,14 +9,16 @@ import { ProductServiceService } from '../product-service.service';
 
 export class MyCartComponent {
 
-    cartDetails = [];
+    cartDetails: any;
     total = 0;
     constructor(private myService: ProductServiceService){
 
     }
 
     ngOnInit(){
-       console.log(this.cartDetails = this.myService.getProductsFromCart());
+       this.myService.getProductsFromCart().subscribe((result) =>{
+        this.cartDetails = result;
+       })
     }
 
     getTotal(){
